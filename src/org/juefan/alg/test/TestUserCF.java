@@ -28,7 +28,8 @@ public class TestUserCF {
         Map<Integer, TestUserCF> map = new HashMap<Integer, TestUserCF>();
         Map<Integer, Set<Integer>> userMap = new HashMap<Integer, Set<Integer>>();
         FileIO fileIO = new FileIO();
-        fileIO.SetfileName(System.getProperty("user.dir") + "\\data\\input\\ml-1m\\ratings.dat");
+//        fileIO.SetfileName(System.getProperty("user.dir") + "\\data\\input\\ml-1m\\ratings.dat");
+        fileIO.SetfileName(System.getProperty("user.dir") + "/data/input/ml-1m/ratings.dat");
         fileIO.FileRead();
         List<String> list = fileIO.cloneList();
         for (String s : list) {
@@ -88,7 +89,8 @@ public class TestUserCF {
 
 
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm");//设置日期格式
-        String dataString = "\\data\\output\\Result\\" + df.format(new Date()) + "_result.txt";
+//        String dataString = "\\data\\output\\Result\\" + df.format(new Date()) + "_result.txt";
+        String dataString = "/data/output/Result/" + df.format(new Date()) + "_result.txt";
         UserCF userCF = new UserCF();
         userCF.K = 40;
         int TRAC = 0;
