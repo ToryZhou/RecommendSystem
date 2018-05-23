@@ -1,4 +1,4 @@
-﻿package org.juefan.IO;
+package org.juefan.IO;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -118,6 +118,7 @@ public class FileIO {
 			fileWriter.write(context);
 			fileWriter.flush();
 		}catch (Exception e) {
+			System.out.println("FileWrite exception");
 		}
 	}
 	

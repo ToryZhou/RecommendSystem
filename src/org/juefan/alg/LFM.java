@@ -1,4 +1,4 @@
-﻿package org.juefan.alg;
+package org.juefan.alg;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-﻿package org.juefan.alg.test;
+package org.juefan.alg.test;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -30,7 +30,7 @@ public class TestLFM {
 	public static LFM lfm = new LFM();
 		
 	public static Map<Integer, Float> getFu(Map<Integer, Float> item){
-		Map<Integer, Float> map = new HashMap<Integer, Float>();	
+		Map<Integer, Float> map = new HashMap<Integer, Float>();
 		while(map.size() < item.size()*4 && item.size() + map.size() < TestLFM.item.size() * 0.8){
 			/**抑制热门方式*/
 			/*int rand = (int) (Math.random() * randMap.size());
@@ -60,7 +60,8 @@ public class TestLFM {
 	public static void main(String[] args) {
 		System.setProperty("java.util.Arrays.useLegacyMergeSort", "true");  
 		FileIO fileIO = new FileIO();
-		fileIO.SetfileName(System.getProperty("user.dir") + "\\data\\input\\ml-1m\\ratings.dat");
+//		fileIO.SetfileName(System.getProperty("user.dir") + "\\data\\input\\ml-1m\\ratings.dat");
+		fileIO.SetfileName(System.getProperty("user.dir") + "/data/input/ml-1m/ratings.dat");
 		fileIO.FileRead();
 		List<String> list = fileIO.cloneList();
 		int num = 0;
@@ -111,9 +112,10 @@ public class TestLFM {
 		System.out.println("负样本生成完毕");
 
 		SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd_HH-mm");//设置日期格式
-		String dataString = "\\data\\output\\Result\\" + df.format(new Date()) + "_result.txt";
+//		String dataString = "\\data\\output\\Result\\" + df.format(new Date()) + "_result.txt";
+		String dataString = "/data/output/Result/" + df.format(new Date()) + "_result.txt";
 		LFM lfm = new LFM(user, item);
-		for(int trac = 0; trac <= 20; trac++){
+		for(int trac = 0; trac <= 1; trac++){
 			LFM.LatentFactorModel(UserItemTrain);
 			for(int user:UserItemTrain.keySet()){
 				if(UserItemTest.containsKey(user)){

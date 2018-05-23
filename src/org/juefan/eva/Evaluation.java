@@ -1,4 +1,4 @@
-﻿package org.juefan.eva;
+package org.juefan.eva;
 
 import java.util.HashSet;
 import java.util.Set;
