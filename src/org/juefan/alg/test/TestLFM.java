@@ -23,11 +23,11 @@ public class TestLFM {
     public static Map<Integer, Integer> randMap = new HashMap<Integer, Integer>();    //倾向选择热门且用户未评价的为负例
 
     /**
-     * 用户项目训练数据
+     * 用户项目训练数据 （这个属于是标准答案）
      */
     public static Map<Integer, Map<Integer, Float>> UserItemTrain = new HashMap<Integer, Map<Integer, Float>>();
     /**
-     * 用户项目测试数据
+     * 用户项目测试数据 （这个用于检验训练后的数据的准备性）
      */
     public static Map<Integer, Map<Integer, Float>> UserItemTest = new HashMap<Integer, Map<Integer, Float>>();
 
